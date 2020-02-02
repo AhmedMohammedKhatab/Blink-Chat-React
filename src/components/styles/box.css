@@ -1,0 +1,113 @@
+* {
+    box-sizing: border-box;
+}
+.Box {
+    flex-basis: 75vw;
+}
+.chat-box {
+    height: 80vh;
+    background-color: white;
+    overflow-x: auto;
+    padding: 20px;
+}
+.sender {
+    max-width: 500px;
+    /* margin-left: 25%; */
+    float: right;
+}
+.clear {
+    clear: both;
+}
+.reciever {
+    max-width: 500px;
+}
+.bubble-right, .bubble-left {
+    background-color: #f0f3f9;
+    padding: 10px;
+    border-radius: 12px;
+    position: relative;
+    box-shadow: 0px 1px 3px gray;
+}
+.bubble-right {
+    transform: translateX(-10px);
+}
+.bubble-left {
+    transform: translateX(10px);
+}
+.bubble-right:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-left: 7px solid #f0f3f9;
+    border-right: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid #f0f3f9;
+    right: -5px;
+    bottom: 1px;
+}
+.bubble-left:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    border-right: 7px solid #f0f3f9;
+    border-left: 7px solid transparent;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid #f0f3f9;
+    left: -5px;
+    bottom: 1px;
+}
+.extra {
+    display: flex;
+    justify-content: space-between;
+    font-size: smaller;
+    color: gray;
+}
+.done {
+    border: none;
+    border-radius: 7px;
+    background-color: white;
+}
+.check {
+    margin-right: 20px;
+}
+.sender-avatar {
+    width: 20px;
+    height: 20px;
+}
+.meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: smaller;
+    color: gray; 
+    align-items: center;
+}
+.actions {
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 40px;
+}
+.actions div:nth-of-type(2) {
+    flex-basis: 80%;
+}
+.plus {
+    border-radius: 50%;
+    box-shadow: 1px 1px 3px gray;
+}
+textarea {
+    resize: none;
+    border-radius: 17px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    box-shadow: 1px 1px 3px gray;
+}
+@media only screen and (max-width: 768px) {
+    .Box {
+        flex-basis: 90vw;
+    }
+}

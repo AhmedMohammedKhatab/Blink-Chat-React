@@ -1,0 +1,41 @@
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #48b0b8;
+    color: white;
+    height: 10vh;
+}
+.Nav h3 {
+    font-size: 15px;
+}
+.nav-list {
+    display: none;
+    width: 100vw;
+    height: 100%;
+    z-index: 999;
+    background-color: #edeeee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #222;
+}
+.Nav ul {
+    list-style: none;
+    display: inline-flex;
+    margin: 0;
+    padding: 0;
+}
+.Nav ul li {
+    margin-right: 20px;
+}
+.friends {
+    display: none;
+}
+@media only screen and (max-width: 768px) {
+    .friends {
+        display: flex;
+    }
+}
